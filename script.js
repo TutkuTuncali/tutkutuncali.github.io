@@ -16,20 +16,24 @@ if (toggle && nav) {
 
 const newsFilters = document.querySelectorAll('.news-filter');
 const newsEntries = document.querySelectorAll('.news-entry');
+const newsPeriods = document.querySelectorAll('.news-period');
 const yearFilter = document.querySelector('#news-year-filter');
 let selectedKind = 'all';
 function updateNews() {
   if (!newsEntries.length) return;
   const year = yearFilter ? yearFilter.value : 'all';
-  let count = 0;
   newsEntries.forEach(entry => {
-    const match = (selectedKind === 'all' || entry.dataset.kind === selectedKind) &&
-                  (year === 'all' || entry.dataset.year === year);
-    entry.hidden = !match;
-    if (match) count += 1;
+    const matches = (selectedKind === 'all' || entry.dataset.kind === selectedKind) &&
+                    (year === 'all' || entry.dataset.year === year);
+    entry.hidden = !matches;
   });
-  const empty = document.querySelector('.news-no-results');
-  if (empty) empty.hidden = count > 0;
+  newsPeriods.forEach(section => {
+    const visible = Array.from(section.querySelectorAll('.news-entry')).some(entry => !entry.hidden);
+    // Hide an empty chronological section, without removing its entries or changing filters.
+    section.hidden = !visible;
+    const noResults = section.querySelector('.news-no-results');
+    if (noResults) noResults.hidden = visible;
+  });
 }
 newsFilters.forEach(button => button.addEventListener('click', () => {
   selectedKind = button.dataset.filter;
