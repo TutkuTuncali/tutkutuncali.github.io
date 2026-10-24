@@ -1,0 +1,24 @@
+{
+  "source_site": "/mnt/data/tutku_academic_site_staging_v35",
+  "output_site": "/mnt/data/tutku_academic_website_final_v36",
+  "news_entries": 74,
+  "category_counts": {
+    "Community": 19,
+    "Conferences": 51,
+    "Projects": 5,
+    "Presentations": 15,
+    "Networks": 9,
+    "Publications": 43,
+    "Talks": 2
+  },
+  "removed_entry": "archaeometry-2026",
+  "removed_photo_ids": [
+    "eco-2026",
+    "avesis-30-2021",
+    "avesis-37-2020",
+    "avesis-35-2020"
+  ],
+  "publisher_book_cover_url": "https://cdn.istanbul.edu.tr/image/JTA6CLJ8T5/0180DFC94A7B420EA1FB8E58D208B224",
+  "book_cover_requires_internet": true,
+  "dotted_capital_I": 0
+}

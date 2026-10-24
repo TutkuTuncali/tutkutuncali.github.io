@@ -187,3 +187,68 @@ html[lang="en"] {font-variant-ligatures:common-ligatures}
 .news-entry .news-video-thumb iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0}
 .fieldwork-card h3 a{color:inherit;text-decoration:none;border-bottom:1px solid transparent}
 .fieldwork-card h3 a:hover,.fieldwork-card h3 a:focus-visible{color:#986f47;border-color:currentColor}
+
+
+/* v18: uncropped, natural-proportion News photo cards. Overrides all legacy size and cover rules. */
+.news-entry.with-photo {
+  grid-template-columns: minmax(90px,108px) minmax(0,1fr) minmax(200px,248px);
+  align-items: start;
+  column-gap: 24px;
+}
+.news-entry .news-thumb,
+.news-entry .news-thumb.news-book-cover {
+  display: block;
+  margin: 0;
+  padding: 7px;
+  width: 100%;
+  min-width: 0;
+  max-height: none !important;
+  overflow: visible !important;
+  align-self: start;
+  box-sizing: border-box;
+  background: #eeeae3;
+}
+.news-entry .news-thumb .news-photo-trigger {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  cursor: zoom-in;
+  background: transparent;
+  line-height: 0;
+}
+.news-entry .news-thumb img,
+.news-entry .news-thumb.news-book-cover img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  filter: none;
+}
+.news-entry:hover .news-thumb img { transform: none !important; filter:none; }
+.news-entry .news-main {min-width:0;}
+@media (max-width:960px) and (min-width:761px) {
+  .news-entry.with-photo {grid-template-columns:82px minmax(0,1fr) minmax(135px,190px);gap:16px;}
+}
+@media (max-width:760px) {
+  .news-entry.with-photo {grid-template-columns:62px minmax(0,1fr);column-gap:13px;row-gap:14px;}
+  .news-entry.with-photo .news-thumb {
+    grid-column:2;
+    width: min(100%,350px);
+    max-width:350px;
+    max-height:none !important;
+  }
+}
+
+/* News archive editorial: one unambiguous date label */
+.news-editorial .editorial-year.since-label {font-size:clamp(27px,3.35vw,51px);letter-spacing:-.035em;line-height:1.12;white-space:nowrap;}
+
+.news-filter-note{font-size:12px;color:#617074;margin:-14px 0 28px;line-height:1.55}
+.news-entry .news-thumb.news-book-cover img{max-height:330px;object-fit:contain!important}

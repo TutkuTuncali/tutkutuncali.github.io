@@ -1,0 +1,59 @@
+{
+  "initial_entries": 72,
+  "final_entries": 67,
+  "merged_conferences": 5,
+  "source_replacements": 3,
+  "AVESIS_pub_links_remaining": 0,
+  "changes": [
+    {
+      "replaced_link": "avesis-45-2018"
+    },
+    {
+      "replaced_link": "avesis-36-2020"
+    },
+    {
+      "merged": [
+        "iso-2026",
+        "avesis-04-2026"
+      ],
+      "title": "ISO 9001 complaint resolution and sustainable fashion rental — International Congress 2026",
+      "papers": 2
+    },
+    {
+      "merged": [
+        "avesis-07-2026",
+        "avesis-06-2026"
+      ],
+      "title": "Greenwashing and sustainable library comfort — Başkent Congress 2026",
+      "papers": 2
+    },
+    {
+      "merged": [
+        "replenishment-2026",
+        "engagement-2026"
+      ],
+      "title": "Machine-learning replenishment and digital work engagement — UYIK 2026",
+      "papers": 2
+    },
+    {
+      "merged": [
+        "nif-congist-2024",
+        "congist-2024"
+      ],
+      "title": "Mount Nif data management and AI readiness — CONGIST 2024",
+      "papers": 2
+    },
+    {
+      "merged": [
+        "avesis-35-2020",
+        "avesis-33-2020"
+      ],
+      "title": "Urban traffic and injury severity modeling — INFUS 2020",
+      "papers": 2
+    },
+    {
+      "replaced_image": "avesis-31-2021"
+    }
+  ],
+  "path": "/mnt/data/tutku_academic_site_staging_v20/news.html"
+}

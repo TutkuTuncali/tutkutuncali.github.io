@@ -23,7 +23,7 @@ function updateNews() {
   if (!newsEntries.length) return;
   const year = yearFilter ? yearFilter.value : 'all';
   newsEntries.forEach(entry => {
-    const matches = (selectedKind === 'all' || entry.dataset.kind === selectedKind) &&
+    const matches = (selectedKind === 'all' || (entry.dataset.tags || '').split('|').includes(selectedKind)) &&
                     (year === 'all' || entry.dataset.year === year);
     entry.hidden = !matches;
   });
